@@ -1,13 +1,15 @@
 # This script reads our metrics.csv files and plots four graphs using Matplotlib
 
 import matplotlib.pyplot as plt
+print(plt.style.available)
 from matplotlib.animation import FuncAnimation
 import pandas as pd
 import os
 from threading import Thread
 import time
 
-plt.style.use(['seaborn-dark-palette', "dark_background"])
+
+plt.style.use(['seaborn-v0_8-darkgrid', "dark_background"])
 SMALL_SIZE = 10
 MEDIUM_SIZE = 12
 BIGGER_SIZE = 14
@@ -27,8 +29,9 @@ fig3 = plt.figure(3)
 fig4 = plt.figure(4)
 episodic_data = None
 
-#path
+#path you can change here to see cartpole or mountain
 #AGENT_TRAIN_METRIC_PATH = "metric.csv"  # Metric file path
+
 AGENT_TRAIN_METRIC_PATH = "mountain_metric.csv"  # Metric file path
 
 

@@ -1,10 +1,12 @@
 import gym
-import pandas as pd
 import tensorflow as tf
-from keras import Model, Input
-from keras.models import clone_model
-from keras.layers import Dense
-from keras.losses import Huber
+from tensorflow import keras
+import pandas as pd
+from tensorflow.keras import Model, Input
+from tensorflow.keras.models import clone_model
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.losses import Huber
+
 #https://www.gymlibrary.dev/environments/classic_control/mountain_car/
 
 env = gym.make("MountainCar-v0")
@@ -26,7 +28,7 @@ EPSILON = 1.0
 EPSILON_DECAY = 1.005
 GAMMA = 0.99
 MAX_TRANSITIONS = 1_00_000
-NUM_EPISODES = 1500
+NUM_EPISODES = 700
 BATCH_SIZE = 64
 TARGET_UPDATE_AFTER = 1000
 LEARN_AFTER_STEPS = 3

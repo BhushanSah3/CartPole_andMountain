@@ -6,8 +6,8 @@ from keras.models import load_model
 env = gym.make("MountainCar-v0")
 q_net = load_model("dqn_mountain_q_net")
 
-#env = gym.make("CartPole-v1")
-#q_net = load_model("dqn_q_net")
+# env = gym.make("CartPole-v1")
+# q_net = load_model("dqn_q_net")
 
 
 def policy(state, explore=0.0):
